@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./Components/header/Header";
+import Main from "./Components/main/Main";
+const headerData = {
+  navPage: [
+    { link: "#", text: "Главная" },
+    { link: "#", text: "Новости" },
+    { link: "#", text: "Размещение и тарифы " },
+    { link: "#", text: "Объявления на карте" },
+    { link: "#", text: "Контакты" },
+    { link: "#", text: "Закладки" },
+  ],
+  navMenu: [
+    { link: "#", text: "Квартиры на сутки" },
+    { link: "#", text: "Коттеджи и усадьбы" },
+    { link: "#", text: "Бани и Сауны" },
+    { link: "#", text: "Авто напрокат" },
+  ],
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header data={headerData} />
+      <Main />
+    </>
   );
 }
 
