@@ -1,8 +1,11 @@
+import React from "react";
+import { Link, Outlet } from "react-router-dom";
+
 function NavPage(props) {
   let data = props.navPage;
   const listItem = data.map((item) => (
     <li>
-      <a href={item.link}>{item.text}</a>
+      <Link to={item.link}>{item.text}</Link>
     </li>
   ));
   return (

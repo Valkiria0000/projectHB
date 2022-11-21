@@ -8,10 +8,12 @@ function Header(props) {
         <div className="header__wrapper">
           <nav className="header__navPage">
             <NavPage navPage={props.data.navPage} />
+            <Outlet />
           </nav>
         </div>
         <nav className="header__navMenu">
           <NavMenu navMenu={props.data.navMenu} />
+          <Outlet />
         </nav>
       </header>
     </>

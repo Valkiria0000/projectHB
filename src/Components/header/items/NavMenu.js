@@ -1,8 +1,11 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
 function NavMenu(props) {
   let data = props.navMenu;
   const menuItem = data.map((item) => (
     <li>
-      <a href={item.link}>{item.text}</a>
+      <Link to={item.link}>{item.text}</Link>
     </li>
   ));
   return (
