@@ -1,11 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 function NavMenu(props) {
   let data = props.navMenu;
   const menuItem = data.map((item) => (
     <li>
       <Link to={item.link}>{item.text}</Link>
+      <Outlet />
     </li>
   ));
   return (
