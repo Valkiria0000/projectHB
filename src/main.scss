@@ -1,6 +1,7 @@
 @import "./style.scss/header";
-@import "./style.scss/section-news";
-@import "./style.scss/error";
+@import "./style.scss/posts";
+@import "./style.scss/blockpost";
+
 * {
   padding: 0;
   margin: 0;
@@ -15,4 +16,9 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
 }

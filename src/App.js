@@ -1,17 +1,17 @@
 import React from "react";
 import Header from "./Components/header/Header";
-import News from "./Components/content/page/NewsPage/News";
-import NewsList from "./Components/content/page/NewsListPage/NewsList";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ErrorPage from "./Components/main/page/ErrorPage/ErrorPage";
+import BlockPost from "./Components/main/page/NewsList/BlockPost";
 const headerData = {
   navPage: [
     { link: "#", text: "Главная" },
     {
-      link: "/newslist",
+      link: "/blockpost",
       text: "Новости",
     },
     {
-      link: "/news",
+      link: "#",
       text: "Размещение и тарифы ",
     },
     {
@@ -36,8 +36,8 @@ function App() {
         <Header data={headerData} />
         <main>
           <Routes>
-            <Route path="/news" element={<News />} />
-            <Route path="/newslist" element={<NewsList />} />
+            <Route path="blockpost" element={<BlockPost />} />
+            <Route path="/*" element={<ErrorPage />} />
           </Routes>
         </main>
       </BrowserRouter>
